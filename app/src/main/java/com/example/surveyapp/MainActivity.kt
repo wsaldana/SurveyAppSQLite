@@ -102,7 +102,7 @@ class MainActivity : AppCompatActivity() {
         val home = HomeFragment()
         val fragment = SendFragment()
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.nav_host_fragment, fragment)
+        transaction.replace(R.id.nav_host_fragment, fragment).addToBackStack( "HomeFragment" )
         transaction.hide(home)
         transaction.commit()
     }
